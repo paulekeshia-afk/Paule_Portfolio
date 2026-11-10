@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Keshia Paule | IT Student Portfolio</title>
 
     <style>
@@ -69,12 +70,12 @@
         .nav-links {
             display: flex;
             align-items: center;
-            gap: 25px;
+            gap: 20px;
             list-style: none;
         }
 
         .nav-links a {
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 600;
             color: var(--dark);
             transition: 0.3s;
@@ -98,6 +99,16 @@
 
         .hero-content {
             max-width: 750px;
+        }
+
+        .profile-picture {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid var(--primary);
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(37, 69, 31, 0.15);
         }
 
         .hero-content h1 {
@@ -182,6 +193,8 @@
             color: var(--gray);
         }
 
+        /* ABOUT ME */
+
         .about-content {
             max-width: 850px;
             margin: auto;
@@ -201,13 +214,12 @@
 
         .education-card {
             max-width: 750px;
-            margin: auto;
+            margin: 0 auto 20px;
             padding: 25px;
             background: white;
             border: 1px solid var(--border);
             border-left: 5px solid var(--primary);
             border-radius: 10px;
-            margin-bottom: 20px;
         }
 
         .education-card h3 {
@@ -228,11 +240,13 @@
         }
 
         .cert-card {
+            display: block;
             background: white;
             padding: 25px;
             border: 1px solid var(--border);
             border-radius: 10px;
             transition: 0.3s;
+            cursor: pointer;
         }
 
         .cert-card:hover {
@@ -248,6 +262,14 @@
         .cert-card p {
             color: var(--gray);
             font-size: 14px;
+        }
+
+        .cert-card span {
+            display: inline-block;
+            margin-top: 12px;
+            color: var(--primary-dark);
+            font-weight: bold;
+            font-size: 13px;
         }
 
         /* SKILLS */
@@ -412,6 +434,11 @@
                 font-size: 27px;
             }
 
+            .profile-picture {
+                width: 150px;
+                height: 150px;
+            }
+
             section:not(#home) {
                 padding: 60px 0;
             }
@@ -422,9 +449,11 @@
 <body>
 
     <!-- NAVIGATION -->
+
     <header>
         <div class="container">
             <nav>
+
                 <a href="#home" class="logo">Keshia.</a>
 
                 <ul class="nav-links">
@@ -437,13 +466,24 @@
                     <li><a href="#strengths">Strengths & Goals</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
+
             </nav>
         </div>
     </header>
 
     <!-- HOME -->
+
     <section id="home">
         <div class="hero-content">
+
+            <img
+                src="images/profile.jpg"
+                alt="Keshia's Profile Picture"
+                class="profile-picture"
+            >
+
+            <br>
+
             <span class="status">
                 Currently Looking for Internship Opportunities
             </span>
@@ -462,12 +502,15 @@
                 <a href="#projects" class="btn">View My Projects</a>
                 <a href="#contact" class="btn btn-outline">Contact Me</a>
             </div>
+
         </div>
     </section>
 
     <!-- ABOUT ME -->
+
     <section id="about">
         <div class="container">
+
             <div class="section-title">
                 <h2>About Me</h2>
                 <p>Get to know me</p>
@@ -483,12 +526,15 @@
                     the IT industry.
                 </p>
             </div>
+
         </div>
     </section>
 
     <!-- EDUCATION -->
+
     <section id="education">
         <div class="container">
+
             <div class="section-title">
                 <h2>Education</h2>
                 <p>My academic background</p>
@@ -502,7 +548,9 @@
 
             <div class="education-card">
                 <h3>Iba National High School</h3>
-                <p>Science, Technology, Engineering, and Mathematics (STEM)</p>
+                <p>
+                    Science, Technology, Engineering, and Mathematics (STEM)
+                </p>
                 <p>Senior High School | Graduated 2023</p>
             </div>
 
@@ -511,12 +559,15 @@
                 <p>High Honor – Grades 11 and 12</p>
                 <p>Dean's Lister – 2nd Year College</p>
             </div>
+
         </div>
     </section>
 
     <!-- CERTIFICATES -->
+
     <section id="certificates">
         <div class="container">
+
             <div class="section-title">
                 <h2>Certificates</h2>
                 <p>My certifications and completed courses</p>
@@ -524,37 +575,71 @@
 
             <div class="card-grid">
 
-                <div class="cert-card">
+                <!-- EXCEL CERTIFICATE -->
+
+                <a
+                    href="images/ms%20excel%202019.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="cert-card"
+                >
                     <h3>Excel 2019 Associate</h3>
                     <p>Certiport</p>
                     <p>May 21, 2024</p>
-                </div>
+                    <span>View Certificate ↗</span>
+                </a>
 
-                <div class="cert-card">
+                <!-- C# CERTIFICATE -->
+
+                <a
+                    href="images/C%23%20cert.png"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="cert-card"
+                >
                     <h3>Foundational C#</h3>
                     <p>Microsoft</p>
                     <p>October 8, 2025</p>
-                </div>
+                    <span>View Certificate ↗</span>
+                </a>
 
-                <div class="cert-card">
+                <!-- CLOUDSWYFT CERTIFICATE -->
+
+                <a
+                    href="images/cloudswyft.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="cert-card"
+                >
                     <h3>Fundamentals of Enterprise Security</h3>
                     <p>CloudSwyft</p>
                     <p>April 22, 2026</p>
-                </div>
+                    <span>View Certificate ↗</span>
+                </a>
 
-                <div class="cert-card">
+                <!-- HTML/CSS CERTIFICATE -->
+
+                <a
+                    href="images/html.jpg"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="cert-card"
+                >
                     <h3>HTML/CSS</h3>
                     <p>TestDome</p>
                     <p>August 8, 2026</p>
-                </div>
+                    <span>View Certificate ↗</span>
+                </a>
 
             </div>
         </div>
     </section>
 
     <!-- SKILLS -->
+
     <section id="skills">
         <div class="container">
+
             <div class="section-title">
                 <h2>Technical Skills</h2>
                 <p>Technologies and tools I have learned</p>
@@ -613,8 +698,10 @@
     </section>
 
     <!-- PROJECTS -->
+
     <section id="projects">
         <div class="container">
+
             <div class="section-title">
                 <h2>My Projects</h2>
                 <p>Some of the projects I have worked on as an IT student</p>
@@ -629,7 +716,9 @@
                         faces using a webcam. It identifies registered
                         faces and displays Unknown for unrecognized faces.
                     </p>
-                    <div class="project-tech">Python | OpenCV | PyCharm</div>
+                    <div class="project-tech">
+                        Python | OpenCV | PyCharm
+                    </div>
                 </div>
 
                 <div class="project-card">
@@ -639,7 +728,9 @@
                         project to practice mobile application development
                         and interface design.
                     </p>
-                    <div class="project-tech">Android Studio</div>
+                    <div class="project-tech">
+                        Android Studio
+                    </div>
                 </div>
 
                 <div class="project-card">
@@ -648,7 +739,9 @@
                         A system developed to practice managing inventory
                         records and organizing product information.
                     </p>
-                    <div class="project-tech">Java</div>
+                    <div class="project-tech">
+                        Java
+                    </div>
                 </div>
 
                 <div class="project-card">
@@ -658,17 +751,24 @@
                         management, cart and checkout, ingredient inventory
                         monitoring, low-stock warnings, and sales reports.
                     </p>
-                    <div class="project-tech">HTML | CSS | PHP | MySQL</div>
+                    <div class="project-tech">
+                        HTML | CSS | PHP | MySQL
+                    </div>
                 </div>
 
                 <div class="project-card">
-                    <h3>University Asset and Facility Maintenance Management System</h3>
+                    <h3>
+                        University Asset and Facility Maintenance
+                        Management System
+                    </h3>
                     <p>
                         A web-based capstone project designed to help
                         universities manage maintenance requests, work
                         orders, assets, and facility-related concerns.
                     </p>
-                    <div class="project-tech">Web Development | Database</div>
+                    <div class="project-tech">
+                        Web Development | Database
+                    </div>
                 </div>
 
             </div>
@@ -676,14 +776,17 @@
     </section>
 
     <!-- STRENGTHS AND CAREER GOALS -->
+
     <section id="strengths">
         <div class="container">
+
             <div class="section-title">
                 <h2>Strengths & Career Goals</h2>
                 <p>My personal qualities and future direction</p>
             </div>
 
             <div class="strength-list">
+
                 <div class="strength-item">
                     Adaptability and willingness to learn new technologies
                 </div>
@@ -711,10 +814,12 @@
                 <div class="strength-item">
                     Open to feedback and continuous improvement
                 </div>
+
             </div>
 
             <div class="career-box">
                 <h3>Career Goals</h3>
+
                 <p>
                     I aim to gain hands-on experience in IT support,
                     cybersecurity, and hardware troubleshooting while
@@ -725,33 +830,46 @@
                     technologies.
                 </p>
             </div>
+
         </div>
     </section>
 
     <!-- CONTACT -->
+
     <section id="contact">
         <div class="container">
+
             <div class="section-title">
                 <h2>Contact Me</h2>
                 <p>Feel free to reach out</p>
             </div>
 
             <div class="contact-content">
+
                 <p>Email Address:</p>
-                <a href="mailto:paulekeshia@gmail.com" class="contact-email">
+
+                <a
+                    href="mailto:paulekeshia@gmail.com"
+                    class="contact-email"
+                >
                     paulekeshia@gmail.com
                 </a>
+
                 <p style="margin-top: 20px;">
                     I am currently looking for internship opportunities
                     where I can learn, grow, and gain experience.
                 </p>
+
             </div>
         </div>
     </section>
 
     <!-- FOOTER -->
+
     <footer>
-        <p>© 2026 Jemima Keshia F. Paule | IT Student Portfolio</p>
+        <p>
+            © 2026 Jemima Keshia F. Paule | IT Student Portfolio
+        </p>
     </footer>
 
 </body>
