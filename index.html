@@ -401,6 +401,36 @@
             font-size: 14px;
         }
 
+        /* BACK TO TOP BUTTON */
+
+        #backToTop {
+            display: none;
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            z-index: 999;
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 45px;
+            height: 45px;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        #backToTop:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-3px);
+        }
+
+        #backToTop:focus-visible {
+            outline: 3px solid var(--primary-dark);
+            outline-offset: 3px;
+        }
+
         /* MOBILE RESPONSIVENESS */
 
         @media (max-width: 850px) {
@@ -453,7 +483,6 @@
     <header>
         <div class="container">
             <nav>
-
                 <a href="#home" class="logo">Keshia.</a>
 
                 <ul class="nav-links">
@@ -466,7 +495,6 @@
                     <li><a href="#strengths">Strengths & Goals</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
-
             </nav>
         </div>
     </header>
@@ -577,10 +605,12 @@
 
                 <!-- EXCEL CERTIFICATE -->
 
-               <a href="./images/ms%20excel%202019.pdf"
-                   target="_blank" 
-                   rel="noopener noreferrer" 
-                   class="cert-card">
+                <a
+                    href="./images/ms%20excel%202019.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="cert-card"
+                >
                     <h3>Excel 2019 Associate</h3>
                     <p>Certiport</p>
                     <p>May 21, 2024</p>
@@ -866,9 +896,19 @@
 
     <footer>
         <p>
-            © 2026 Jemima Keshia F. Paule | IT Student Portfolio
+            © <span id="currentYear">2026</span> Keshia. All Rights Reserved.
         </p>
     </footer>
+
+    <!-- BACK TO TOP BUTTON -->
+
+    <button id="backToTop" title="Back to Top" aria-label="Back to Top">
+        ↑
+    </button>
+
+    <!-- JAVASCRIPT FILE -->
+
+    <script src="script.js"></script>
 
 </body>
 </html>
